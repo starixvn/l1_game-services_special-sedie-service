@@ -1,0 +1,33 @@
+{
+    "name": "special-sedie-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --es-module-specifier-resolution=node --watch ./src ./src/app.js",
+        "debug": "nodemon --es-module-specifier-resolution=node --watch ./ --inspect ./src/app.js",
+        "prod": "node --max-old-space-size=8192 --es-module-specifier-resolution=node ./src/app.js",
+        "reg": "npm set registry http://npm.lumigame.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://git3.nexdev.net/l1/game-services/special-sedie-service.git"
+    },
+    "author": "pentagon",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "mongoose": "^5.10.7",
+        "mongoose-auto-increment-reworked": "^1.2.1",
+        "sc-pool-betting-game-base": "^1.0.0-beta.1"
+    },
+    "devDependencies": {
+        "sc-semantic-release": "^1.2.0"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}
