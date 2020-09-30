@@ -1,8 +1,10 @@
 import { Core } from "sc-game-base";
-import { GameData } from "sc-pool-betting-game-base";
+import { GameApp, GameData } from "sc-pool-betting-game-base";
 
+import appConfigs from "./app-configs";
 import gameSettings from "./game-settings";
 import { SpecialSeDieBetLogs, SpecialSeDieBets, SpecialSeDieRounds } from "./models";
+import Startup from "./startup";
 
 const settlementRuleEntries = Object.entries({
     odd: (totalReds) => totalReds % 2 === 1,
@@ -38,6 +40,10 @@ const run = async () => {
         SpecialSeDieBets,
         SpecialSeDieBetLogs
     );
+    const startup = new Startup({ appConfigs, gameDefinition, gameData });
+    const app = new GameApp({ appConfigs, definition: gameDefinition, gameData, startup });
+
+    await app.run();
 };
 
 run();
