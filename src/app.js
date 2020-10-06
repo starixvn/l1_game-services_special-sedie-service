@@ -32,7 +32,7 @@ const getSettlementResult = (roundResult) => {
 
 const run = async () => {
     const gameData = new GameData(gameSettings.durations.wholeRound);
-    const gameDefinition = new Core.GameDefinition(
+    const definition = new Core.GameDefinition(
         gameSettings,
         generateResult,
         getSettlementResult,
@@ -40,8 +40,8 @@ const run = async () => {
         SpecialSeDieBets,
         SpecialSeDieBetLogs
     );
-    const startup = new Startup({ appConfigs, gameDefinition, gameData });
-    const app = new GameApp({ appConfigs, definition: gameDefinition, gameData, startup });
+    const startup = new Startup({ appConfigs, definition, gameData });
+    const app = new GameApp({ appConfigs, definition, gameData, startup });
 
     await app.run();
 };

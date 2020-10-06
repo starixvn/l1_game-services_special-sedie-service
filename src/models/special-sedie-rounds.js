@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import autoIncrement from "mongoose-auto-increment-reworked";
 
 const modelName = "SpecialSeDie_phien";
 

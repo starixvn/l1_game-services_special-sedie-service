@@ -9,7 +9,7 @@ const Schema = new mongoose.Schema({
     amount: { type: Number, required: true },
 
     thanhtoan: { type: Boolean, default: false },
-    tralai: { type: Number, default: 0 },
+    refund: { type: Number, default: 0 },
     win: { type: Boolean, default: false },
     betwin: { type: Number, default: 0 },
     time: { type: Date },
