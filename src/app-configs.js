@@ -14,7 +14,7 @@ export default {
         enableApiLogs: true,
     },
     mainServerApiSettings: {
-        url: "http://localhost:8080/api",
+        url: "http://lumigame.com:8080/api",
         auth: {
             url: "http://auth.lumigame.com",
             id: "game-server",

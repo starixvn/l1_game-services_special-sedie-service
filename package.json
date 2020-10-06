@@ -20,7 +20,7 @@
     "dependencies": {
         "mongoose": "^5.10.7",
         "mongoose-auto-increment-reworked": "^1.2.1",
-        "sc-pool-betting-game-base": "^1.0.0-beta.11"
+        "sc-pool-betting-game-base": "^1.0.0-beta.12"
     },
     "devDependencies": {
         "@commitlint/cli": "^9.1.2",
