@@ -1,0 +1,25 @@
+post_build_local:
+    extends:
+        - .post_build
+        - .deploy:local:rules
+    needs: ["build_image"]
+    environment:
+        name: LOCAL
+
+deploy_local:
+    extends:
+        - .base_deploy_swarm_service
+        - .deploy:local:rules
+    needs: ["post_build_local"]
+    variables:
+        SERVER_IP: $LOCAL_IP
+        SERVER_USER: $LOCAL_USER
+        SERVER_PORT: $LOCAL_SSH_PORT
+        DOCKER_PUBLIC_PORT: 8084
+        DOCKER_PRIVATE_PORT: 8084
+        DOCKER_NETWORK_NAME: lumi-network
+        SWARM_NODES: 10.10.50.14 10.10.50.18 10.10.50.19
+        SWARM_REPLICAS: 1
+        NODE_LABEL: L1
+    environment:
+        name: LOCAL
