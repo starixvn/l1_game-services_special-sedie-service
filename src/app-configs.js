@@ -14,11 +14,11 @@ export default {
         enableApiLogs: true,
     },
     mainServerApiSettings: {
-        url: "http://haproxy.lumigame.com:7000/main/api",
+        url: "http://localhost:8080/api",
         auth: {
             url: "http://auth.lumigame.com",
-            id: "game-server",
-            secret: "gameserver@20luminet&",
+            id: "admin-api",
+            secret: "adminapi@20luminet&",
         },
         requestTimeout: 10000,
         placeBetTimeout: 4500,

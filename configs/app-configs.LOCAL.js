@@ -17,8 +17,8 @@ export default {
         url: "http://haproxy.lumigame.com:7000/main/api",
         auth: {
             url: "http://auth.lumigame.com",
-            id: "game-server",
-            secret: "gameserver@20luminet&",
+            id: "admin-api",
+            secret: "adminapi@20luminet&",
         },
         requestTimeout: 10000,
         placeBetTimeout: 4500,
