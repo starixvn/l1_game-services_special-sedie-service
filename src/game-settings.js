@@ -4,6 +4,7 @@ export default {
     durations: {
         wholeRound: 39,
         placingBets: 30,
+        balancingBetTime: 9,
         lockingBet: 5,
         shakeThePlateDuration: 2,
     },
