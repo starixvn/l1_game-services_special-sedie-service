@@ -2,6 +2,7 @@ import { Core } from "sc-game-base";
 import { GameApp, GameData } from "sc-pool-betting-game-base";
 
 import appConfigs from "./app-configs";
+import { GameCron } from "./crons";
 import gameSettings from "./game-settings";
 import { SpecialSeDieBetLogs, SpecialSeDieBets, SpecialSeDieRounds } from "./models";
 import Startup from "./startup";
@@ -40,7 +41,7 @@ const run = async () => {
         SpecialSeDieBets,
         SpecialSeDieBetLogs
     );
-    const startup = new Startup({ appConfigs, definition, gameData });
+    const startup = new Startup({ appConfigs, definition, gameData, gameCron: new GameCron({ definition, gameData }) });
     const app = new GameApp({ appConfigs, definition, gameData, startup });
 
     await app.run();

@@ -5,6 +5,7 @@ import { GameStartup, Routers } from "sc-pool-betting-game-base";
 import { PlaceBetConsumer } from "./consumers";
 
 export default class Startup extends GameStartup {
+
     /**
      * @param {socketIo.Socket} socketClient
      */
