@@ -40,8 +40,8 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "http://f371d3a21b2e468eaf7b4a80c45e9d11@10.99.99.187:800/114",
-        logIdentifier: "sedie",
+        sentryUrl: "http://6a89b92119d946aa92f584de421d3139@10.99.99.187:800/135",
+        logIdentifier: "special-sedie",
         env: "SIT",
     },
     authenticateSettings: {
