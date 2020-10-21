@@ -40,7 +40,6 @@ export default {
             auto_reconnect: true,
         },
     },
-    
     sentry: {
         sentryUrl: "http://1d8a29cd199b449a88d7c655df61703c@10.99.99.187:803/109",
         logIdentifier: "special-sedie",
