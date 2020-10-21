@@ -8,7 +8,7 @@ post_build_prod:
 
 deploy_prod:
     extends:
-        - .base_deploy_kbt
+        - .base_deploy_swarm_service
         - .deploy:prod:rules
     needs: ["post_build_prod"]
     variables:
