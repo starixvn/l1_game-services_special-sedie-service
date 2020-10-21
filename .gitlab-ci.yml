@@ -39,4 +39,4 @@ include:
     - local: .gitlab-ci/deploy-local.gitlab-ci.yml
     - local: .gitlab-ci/deploy-sit.gitlab-ci.yml
     - local: .gitlab-ci/deploy-uat.gitlab-ci.yml
-    # - local: .gitlab-ci/deploy-prod.gitlab-ci.yml
+    - local: .gitlab-ci/deploy-prod.gitlab-ci.yml
