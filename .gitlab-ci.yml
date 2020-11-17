@@ -1,5 +1,3 @@
-image: docker:19.03.12
-
 variables:
     WORKING_PATH: /var/www/l1/special-sedie-service/
     DOCKER_SERVICE_NAME: l1-special-sedie-service
@@ -10,9 +8,6 @@ variables:
     CONFIG_CONTAINER_PATH: /opt/node_app/app/app-configs.js
     PROJECT_NAME: l1-special-sedie-service
     
-services:
-    - docker:19.03.12-dind
-
 stages:
     - test
     - build
