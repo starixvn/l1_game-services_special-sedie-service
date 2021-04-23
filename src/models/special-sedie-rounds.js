@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import autoIncrement from "mongoose-auto-increment-reworked";
 
 const modelName = "SpecialSeDie_phien";
 
@@ -22,12 +21,11 @@ const settlementResultSchema = new mongoose.Schema(
 );
 
 const Schema = new mongoose.Schema({
+    id: { type: Number, required: true },
     result: resultSchema,
     settlementResult: settlementResultSchema,
     time: { type: Date, default: new Date() },
 });
-
-Schema.plugin(autoIncrement.MongooseAutoIncrementID.plugin, { modelName, field: "id" });
 
 const model = mongoose.model(modelName, Schema);
 

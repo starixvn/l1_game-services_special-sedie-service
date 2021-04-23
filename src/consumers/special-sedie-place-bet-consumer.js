@@ -1,7 +1,7 @@
 import { helpers } from "sc-common";
-import { EventConsumers } from "sc-pool-betting-game-base";
+import { PlaceBetConsumer } from "sc-pool-betting-game-base";
 
-export default class PlaceBetConsumer extends EventConsumers.PlaceBetConsumer {
+export default class SpecialSediePlaceBetConsumer extends PlaceBetConsumer {
     composeBettingTimeValidationCriteria() {
         const configs = this.gameData.gameConfigs;
         const shakeThePlateTime = this.definition.durations.placingBets + this.definition.durations.shakeThePlateDuration;
