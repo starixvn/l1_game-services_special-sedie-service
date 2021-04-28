@@ -1,3 +1,3 @@
-import GameCron from "./game-cron";
+import SpecialSedieGameCron from "./special-sedie-game-cron";
 
-export { GameCron };
+export { SpecialSedieGameCron };

@@ -1,11 +1,9 @@
 import { Core } from "sc-game-base";
-import { GameApp, GameData } from "sc-pool-betting-game-base";
+import { GameData } from "sc-pool-betting-game-base";
 
 import appConfigs from "./app-configs";
-import { GameCron } from "./crons";
 import gameSettings from "./game-settings";
-import { SpecialSeDieBetLogs, SpecialSeDieBets, SpecialSeDieRounds } from "./models";
-import Startup from "./startup";
+import SpecialSedieContainerRegistry from "./special-sedie-container-registry";
 
 const settlementRuleEntries = Object.entries({
     odd: (totalReds) => totalReds % 2 === 1,
@@ -33,16 +31,9 @@ const getSettlementResult = (roundResult) => {
 
 const run = async () => {
     const gameData = new GameData(gameSettings.durations.wholeRound);
-    const definition = new Core.GameDefinition(
-        gameSettings,
-        generateResult,
-        getSettlementResult,
-        SpecialSeDieRounds,
-        SpecialSeDieBets,
-        SpecialSeDieBetLogs
-    );
-    const startup = new Startup({ appConfigs, definition, gameData, gameCron: new GameCron({ definition, gameData }) });
-    const app = new GameApp({ appConfigs, definition, gameData, startup });
+    const definition = new Core.GameDefinition(gameSettings, generateResult, getSettlementResult);
+    const container = new SpecialSedieContainerRegistry().register(appConfigs, definition, gameData);
+    const app = new Core.BaseGameApp(container);
 
     await app.run();
 };
