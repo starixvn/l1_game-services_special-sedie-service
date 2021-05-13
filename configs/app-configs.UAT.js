@@ -41,7 +41,7 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "http://27695e2250c741e298cdfb69b0b4ffa5@10.99.99.187:800/136",
+        sentryUrl: "http://7ba626fc5eea40709545d4adf36975c6@10.99.99.187:800/29",
         logIdentifier: "special-sedie",
         env: "UAT",
     },

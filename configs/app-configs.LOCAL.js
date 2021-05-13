@@ -41,7 +41,7 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "https://8c8a6d0dd58d4d18aa41e703bde72db3@sentryuat.sabagame.com/134",
+        sentryUrl: "https://13f39b8359404ed5aec23655e64ccf78@sentry.lumigame.com/2",
         logIdentifier: "special-sedie",
         env: "LOCAL",
     },
