@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-const modelName = "SpecialSeDie_phien";
-
 const resultSchema = new mongoose.Schema(
     {
         red1: { type: Boolean, required: true },
@@ -27,6 +25,4 @@ const Schema = new mongoose.Schema({
     time: { type: Date, default: new Date() },
 });
 
-const model = mongoose.model(modelName, Schema);
-
-export default model;
+export const SpecialSeDieRounds = mongoose.model("SpecialSeDie_phien", Schema);
