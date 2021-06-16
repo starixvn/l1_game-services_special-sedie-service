@@ -131,7 +131,6 @@ describe("composeBettingTimeValidationCriteria tests", () => {
             min: gameDefinition.durations.lockingBet + 1,
             max: gameDefinition.durations.placingBets,
         });
-
         const placeBetConsumer = new SpecialSediePlaceBetConsumer(gameDefinition, gameData);
 
         // act
