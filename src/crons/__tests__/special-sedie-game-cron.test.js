@@ -3,7 +3,7 @@ import { Core } from "sc-game-base";
 
 import SpecialSeDieGameCron from "../special-sedie-game-cron";
 
-describe("composeBettingTimeValidationCriteria tests", () => {
+describe("isStartingTime tests", () => {
     const gameData = new Core.GameData();
     gameData.remainingTime = 20;
     gameData.gameConfigs = {
