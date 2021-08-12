@@ -13,6 +13,7 @@ const Schema = new mongoose.Schema({
     win: { type: Boolean, default: false },
     betwin: { type: Number, default: 0 },
     time: { type: Date },
+    odds: { type: Object },
 
     memberId: { type: Number },
     siteId: { type: String },
