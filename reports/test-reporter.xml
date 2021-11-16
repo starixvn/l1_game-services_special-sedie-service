@@ -1,14 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-    <file path="G:\Projects\L1\special-sedie-service\src\crons\__tests__\special-sedie-game-cron.test.js">
-        <testCase name="composeBettingTimeValidationCriteria tests should return true time is shakeThePlateTime" duration="1"/>
-        <testCase name="composeBettingTimeValidationCriteria tests should return false time is NOT shakeThePlateTime" duration="1"/>
-    </file>
-    <file path="G:\Projects\L1\special-sedie-service\src\consumers\__tests__\special-sedie-place-bet-consumer.test.js">
-        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if game was disabled" duration="4"/>
-        <testCase name="composeBettingTimeValidationCriteria tests should return cannotPlaceBet notice if bet comes in settlement time" duration="1"/>
-        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if bet comes in locking bet time" duration="1"/>
-        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if bet comes in shaking plate time" duration="1"/>
-        <testCase name="composeBettingTimeValidationCriteria tests should not return any failures if valid" duration="1"/>
-    </file>
 </testExecutions>

@@ -23,7 +23,6 @@ const Schema = new mongoose.Schema({
     currency: { type: String, require: true },
     rate: { type: Number, require: true },
     partnerId: { type: String, require: true },
-    siteId: { type: String },
 });
 
 Schema.index({ uid: 1, phien: 1 }, { background: true });
