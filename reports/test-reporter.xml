@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+    <file path="D:\Git3\L1\game-services\special-sedie-service\src\helpers\__tests__\result-helper.test.js">
+        <testCase name="getSettlementResult tests should return odd if results have ONE red" duration="9"/>
+        <testCase name="getSettlementResult tests should return even if results have TWO reds" duration="1"/>
+        <testCase name="getSettlementResult tests should return odd if results have THREE reds" duration="1"/>
+        <testCase name="getSettlementResult tests should return even if results have FOUR reds" duration="1"/>
+        <testCase name="getSettlementResult tests should return even and white4 if results have NO reds" duration="2"/>
+        <testCase name="generateResult tests should return enough results" duration="2"/>
+    </file>
+    <file path="D:\Git3\L1\game-services\special-sedie-service\src\crons\__tests__\special-sedie-game-cron.test.js">
+        <testCase name="isStartingTime tests should return true time is shakeThePlateTime" duration="6"/>
+        <testCase name="isStartingTime tests should return false time is NOT shakeThePlateTime" duration="1"/>
+    </file>
+    <file path="D:\Git3\L1\game-services\special-sedie-service\src\consumers\__tests__\special-sedie-place-bet-consumer.test.js">
+        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if game was disabled" duration="11"/>
+        <testCase name="composeBettingTimeValidationCriteria tests should return cannotPlaceBet notice if bet comes in settlement time" duration="4"/>
+        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if bet comes in locking bet time" duration="2"/>
+        <testCase name="composeBettingTimeValidationCriteria tests should return placeBetNextRound notice if bet comes in shaking plate time" duration="7"/>
+        <testCase name="composeBettingTimeValidationCriteria tests should not return any failures if valid" duration="1"/>
+    </file>
 </testExecutions>
