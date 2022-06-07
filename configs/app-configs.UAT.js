@@ -64,4 +64,5 @@ export default {
         "http://l1uatm.sgamesuat.com",
         "https://l1uatm.sgamesuat.com",
     ],
+    enableMsgpackParser: true,
 };

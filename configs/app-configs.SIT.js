@@ -65,4 +65,5 @@ export default {
         "http://l1sit.sgamesuat.com",
         "https://l1sit.sgamesuat.com",
     ],
+    enableMsgpackParser: true,
 };
