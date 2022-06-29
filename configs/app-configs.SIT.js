@@ -10,19 +10,19 @@ export default {
         },
         useAuthenticate: true,
         requestTimeout: 10000,
-        placeBetTimeout: 4500,
+        placeBetTimeout: 4000,
         enabledApiLogs: true,
     },
-    mainServerApiSettings: {
-        url: "http://l1_game_server_sit:5000/api",
-        auth: {
-            url: "http://l1_auth_api_sit:5000",
-            id: "game-services",
-            secret: "gameservices@20luminet&",
-        },
+    authenticateSettings: {
+        url: "http://l1_auth_api_sit:5000",
+        id: "game-services",
+        secret: "gameservices@20luminet&",
         requestTimeout: 10000,
-        placeBetTimeout: 4500,
         useAuthenticate: true,
+        audiences: ["api", "admin-api"],
+    },
+    userServiceSettings: {
+        url: "http://l1_user_service_sit:5000",
     },
     socketOptions: {
         pingInterval: 60 * 1000,
@@ -44,9 +44,6 @@ export default {
         logIdentifier: "special-sedie",
         env: "SIT",
     },
-    authenticateSettings: {
-        audiences: ["api", "admin-api"],
-    },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
     enableCorsWs: true,
     corsUrls: [
@@ -65,4 +62,5 @@ export default {
         "http://l1sit.sgamesuat.com",
         "https://l1sit.sgamesuat.com",
     ],
+    enableMsgpackParser: true,
 };

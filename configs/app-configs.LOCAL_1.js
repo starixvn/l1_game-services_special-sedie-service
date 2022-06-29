@@ -10,19 +10,19 @@ export default {
         },
         useAuthenticate: true,
         requestTimeout: 10000,
-        placeBetTimeout: 4500,
+        placeBetTimeout: 4000,
         enabledApiLogs: true,
     },
-    mainServerApiSettings: {
-        url: "http://l1_game_server_local_1:5000/api",
-        auth: {
-            url: "http://l1_auth_api_local_1:5000",
-            id: "game-services",
-            secret: "gameservices@20luminet&",
-        },
+    authenticateSettings: {
+        url: "http://l1_auth_api_local_1:5000",
+        id: "game-services",
+        secret: "gameservices@20luminet&",
         requestTimeout: 10000,
-        placeBetTimeout: 4500,
         useAuthenticate: true,
+        audiences: ["api", "admin-api"],
+    },
+    userServiceSettings: {
+        url: "http://l1_user_service_local_1:5000",
     },
     socketOptions: {
         pingInterval: 60 * 1000,
@@ -32,7 +32,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://lmn_backend:LmnBackend@10.10.50.14:17101/?replicaSet=L1pLocal",
+        url: "mongodb://lmn_backend:LmnBackend@10.10.50.12:39101,10.10.50.13:39101,10.10.50.14:39101/?replicaSet=L1pLocal",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
@@ -45,9 +45,6 @@ export default {
         logIdentifier: "special-sedie",
         env: "LOCAL-1",
     },
-    authenticateSettings: {
-        audiences: ["api", "admin-api"],
-    },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
     enableCorsWs: true,
     corsUrls: [
@@ -58,4 +55,5 @@ export default {
         "http://l1-m1.lumigame.com",
         "https://l1-m1.lumigame.com",
     ],
+    enableMsgpackParser: false,
 };
