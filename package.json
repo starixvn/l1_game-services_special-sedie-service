@@ -9,7 +9,8 @@
         "dev": "nodemon --es-module-specifier-resolution=node --watch ./src ./src/app.js",
         "debug": "nodemon --es-module-specifier-resolution=node --watch ./ --inspect ./src/app.js",
         "prod": "node --max-old-space-size=8192 --es-module-specifier-resolution=node ./src/app.js",
-        "reg": "npm set registry http://npm.lumigame.com"
+        "reg": "npm set registry http://npm.lumigame.com",
+        "stats": "nodemon --es-module-specifier-resolution=node --watch ./tests ./tests/result-statistic.js"
     },
     "jestSonar": {
         "reportPath": "reports",
@@ -24,9 +25,12 @@
     "license": "ISC",
     "type": "module",
     "dependencies": {
+        "chance": "^1.1.8",
         "mongoose": "^5.10.7",
         "nodemon": "^2.0.7",
-        "sc-pool-betting-game-base": "2.4.4"
+        "random": "^3.0.6",
+        "random-js": "^2.1.0",
+        "sc-pool-betting-game-base": "2.4.5-beta.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.12.11",

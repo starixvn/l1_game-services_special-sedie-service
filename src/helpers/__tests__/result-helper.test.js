@@ -1,5 +1,22 @@
 import { generateResult, getSettlementResult } from "../result-helper";
 
+const chanceMock = { pickoneIndex: 0 };
+
+jest.mock("chance", () => {
+    return function () {
+        const orig = {
+            ...jest.requireActual("chance"),
+        };
+
+        return {
+            bool: (opt) => {
+                return new orig.Chance().bool(opt);
+            },
+            pickone: (arr) => arr[chanceMock.pickoneIndex],
+        };
+    };
+});
+
 describe("getSettlementResult tests", () => {
     it("should return odd if results have ONE red", () => {
         // arrange
@@ -78,11 +95,23 @@ describe("getSettlementResult tests", () => {
 });
 
 describe("generateResult tests", () => {
-    it("should return enough results", () => {
-        // act
-        var result = generateResult();
+    const testCases = [
+        { randomMode: undefined, pickoneIndex: 0 },
+        { randomMode: 1, pickoneIndex: 0 },
+        { randomMode: 2, pickoneIndex: 0 },
+        { randomMode: 3, pickoneIndex: 0 },
+        { randomMode: 3, pickoneIndex: 1 },
+    ];
 
-        // assert
+    it.each(testCases)("should return correct results", ({ randomMode, pickoneIndex }) => {
+        // Arrange
+        chanceMock.pickoneIndex = pickoneIndex;
+
+        // Act
+        const result = generateResult(randomMode);
+
+        // Assert
         expect(Object.keys(result).length).toBe(4);
+        expect(Object.values(result).some((dice) => typeof dice != "boolean")).toBeFalsy();
     });
 });
