@@ -2,19 +2,19 @@ export default {
     hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
-        apiUrl: "http://l1_game_api_local:5000",
-        authUrl: "http://l1_auth_api_local:5000",
+        apiUrl: "http://l1_game_api_uat:5000",
+        authUrl: "http://l1_auth_api_uat:5000",
         client: {
             id: "game-server",
             secret: "gameserver@20luminet&",
         },
         useAuthenticate: true,
-        requestTimeout: 10000,
         placeBetTimeout: 4000,
+        requestTimeout: 10000, // 10s
         enabledApiLogs: true,
     },
     authenticateSettings: {
-        url: "http://l1_auth_api_local:5000",
+        url: "http://l1_auth_api_uat:5000",
         id: "game-services",
         secret: "gameservices@20luminet&",
         requestTimeout: 10000,
@@ -22,7 +22,7 @@ export default {
         audiences: ["api", "admin-api"],
     },
     userServiceSettings: {
-        url: "http://l1_user_service_local:5000",
+        url: "http://l1_user_service_uat:5000",
     },
     socketOptions: {
         pingInterval: 60 * 1000,
@@ -32,7 +32,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://lmn_backend:LmnBackend@10.10.50.12:39100,10.10.50.13:39100,10.10.50.14:39100/?replicaSet=L1Local",
+        url: "mongodb://lmn_backend:LmnBackend%4022027@10.99.99.187:27201/?replicaSet=SabaUAT&appName=SpecialSedie",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
@@ -41,18 +41,25 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "https://13f39b8359404ed5aec23655e64ccf78@sentry.lumigame.com/2",
+        sentryUrl: "http://52368c4019044019885440599c180bda@10.2.190.51:9009/24",
         logIdentifier: "special-sedie",
-        env: "LOCAL",
+        env: "UAT",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
-    enableCorsWs: false,
+    enableCorsWs: true,
     corsUrls: [
-        "http://localhost:7456",
-        "http://localhost:7000",
-        "https://games.lumigame.com",
-        "https://admin.lumigame.com",
-        "http://l1-m.lumigame.com",
-        "https://l1-m.lumigame.com",
+        "http://uat.sabagame.com",
+        "https://uat.sabagame.com",
+        "http://uat-adm.sabagame.com",
+        "https://uat-adm.sabagame.com",
+        "http://uatm.sabagame.com",
+        "https://uatm.sabagame.com",
+        "http://l1uat.sgamesuat.com",
+        "https://l1uat.sgamesuat.com",
+        "http://l1uatadm.sgamesuat.com",
+        "https://l1uatadm.sgamesuat.com",
+        "http://l1uatm.sgamesuat.com",
+        "https://l1uatm.sgamesuat.com",
     ],
+    enableMsgpackParser: true,
 };

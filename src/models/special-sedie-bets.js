@@ -3,13 +3,11 @@ import mongoose from "mongoose";
 const betLog = {
     uid: { type: String, required: true },
     name: { type: String, required: true },
-    phien: { type: Number, required: true },
 
     choice: { type: String, required: true },
     amount: { type: Number, required: true },
     baseAmount: { type: Number, required: true },
 
-    thanhtoan: { type: Boolean, default: false },
     refund: { type: Number, default: 0 },
     baseRefund: { type: Number, default: 0 },
     win: { type: Boolean, default: false },
@@ -19,14 +17,12 @@ const betLog = {
     baseTotalWin: { type: Number, default: 0 },
     time: { type: Date },
 
-    memberId: { type: Number },
     siteId: { type: String },
-    currency: { type: String, require: true },
-    rate: { type: Number, require: true },
-    partnerId: { type: String, require: true },
+    currency: { type: String, required: true },
+    rate: { type: Number, required: true },
 
     playerId: { type: Number },
-    operatorId: { type: String, require: true },
+    operatorId: { type: String, required: true },
     roundId: { type: Number, required: true },
     paid: { type: Boolean, default: false },
 };
