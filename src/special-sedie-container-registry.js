@@ -2,6 +2,7 @@ import { asClass, asValue } from "awilix";
 import { ContainerRegistry } from "sc-pool-betting-game-base";
 
 import { SpecialSediePlaceBetConsumer } from "./consumers";
+import SettleGameRoundConsumer from "./consumers/settle-game-round-consumer";
 import { SpecialSedieGameCron } from "./crons";
 import { SpecialSeDieBetLogs, SpecialSeDieBets, SpecialSeDieRounds } from "./models";
 
@@ -20,6 +21,7 @@ export default class SpecialSedieContainerRegistry extends ContainerRegistry {
         super.registerConsumers();
 
         this.container.register({
+            settleGameRoundConsumer: asClass(SettleGameRoundConsumer).singleton().proxy(),
             placeBetConsumer: asClass(SpecialSediePlaceBetConsumer).singleton(),
         });
     }
