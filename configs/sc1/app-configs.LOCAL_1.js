@@ -56,4 +56,5 @@ export default {
         "https://l1-m1.lumigame.com",
     ],
     enableMsgpackParser: false,
+    balancedBotBettingTime: 10,
 };

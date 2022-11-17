@@ -63,4 +63,5 @@ export default {
         "https://l1sit.sgamesuat.com",
     ],
     enableMsgpackParser: true,
+    balancedBotBettingTime: 10,
 };

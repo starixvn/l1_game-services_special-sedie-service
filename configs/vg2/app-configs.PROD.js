@@ -67,4 +67,5 @@ export default {
         "https://m2.v-gaming.net",
     ],
     enableMsgpackParser: true,
+    balancedBotBettingTime: 10,
 };

@@ -55,4 +55,5 @@ export default {
         "http://l1-m.lumigame.com",
         "https://l1-m.lumigame.com",
     ],
+    balancedBotBettingTime: 10,
 };

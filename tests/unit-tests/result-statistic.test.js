@@ -1,6 +1,7 @@
-import { generateResult, getSettlementResult } from "../src/helpers/result-helper";
+import { generateResult, getSettlementResult } from "../../src/helpers/result-helper";
 
-function run() {
+it("run statistic", () => {
+    // Arrange & Act
     const totalRounds = 100_000;
     const streaks = {
         odd: {},
@@ -49,6 +50,8 @@ function run() {
     console.log(stats);
     console.log(`Longest streaks (>=${longestStreak}): `);
     console.log(streaks);
-}
 
-run();
+    // Assert
+    expect(stats["odd"].ratio).toBeGreaterThanOrEqual(0.47);
+    expect(stats["even"].ratio).toBeGreaterThanOrEqual(0.47);
+});

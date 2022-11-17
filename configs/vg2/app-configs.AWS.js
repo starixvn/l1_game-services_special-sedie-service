@@ -49,4 +49,5 @@ export default {
     adminSecretKey: "asWDEer4yGdgsdqR4uqmKQZgh",
     enableCorsWs: true,
     corsUrls: ["https://sc2-games.sportsfun.app", "https://sc2-adm.sportsfun.app"],
+    balancedBotBettingTime: 10,
 };

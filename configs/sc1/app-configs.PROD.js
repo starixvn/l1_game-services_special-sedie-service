@@ -66,4 +66,5 @@ export default {
         "https://m.gamesaba.com",
     ],
     enableMsgpackParser: true,
+    balancedBotBettingTime: 10,
 };
