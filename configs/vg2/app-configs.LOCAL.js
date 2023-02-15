@@ -47,17 +47,5 @@ export default {
         env: "LOCAL",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
-    enableCorsWs: false,
-    corsUrls: [
-        "http://localhost:7456",
-        "http://localhost:7000",
-        "http://localhost:3000",
-        "http://l2-games.lumigame.com",
-        "https://l2-games.lumigame.com",
-        "http://l2-admin.lumigame.com",
-        "https://l2-admin.lumigame.com",
-        "http://l2-m.lumigame.com",
-        "https://l2-m.lumigame.com",
-    ],
     balancedBotBettingTime: 10,
 };
