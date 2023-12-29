@@ -2,8 +2,8 @@ export default {
     hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
-        apiUrl: "http://l1_game_api_local_2:5000",
-        authUrl: "http://l1_auth_api_local_2:5000",
+        apiUrl: "http://l2_game_api_local_2:5000",
+        authUrl: "http://l2_auth_api_local_2:5000",
         client: {
             id: "game-server",
             secret: "gameserver@20luminet&",
@@ -43,7 +43,7 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "https://13f39b8359404ed5aec23655e64ccf78@sentry.lumigame.com/2",
+        sentryUrl: "https://acb36eb835d948d68c1aad9873754d51@sentry.lumigame.com/27",
         logIdentifier: "special-sedie",
         env: "LOCAL-2",
     },
